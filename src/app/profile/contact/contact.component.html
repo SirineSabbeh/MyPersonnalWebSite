@@ -1,0 +1,136 @@
+<main>
+ 
+    <app-header></app-header>
+      <div class="main-content">
+       <app-navbar></app-navbar>
+        <article class="about  active" data-page="about">
+   
+           <header>
+             <h2 class="h2 article-title">CONTACT ME
+            </h2>
+           </header>
+         
+         
+           
+           <div class="row">
+           <div class="col-md-4" >
+           <div class="card" style="margin-bottom:30px;">
+            <div class="row">
+              <div class="contact-color">
+                <div class="card-body cc-education-header">
+                  <p style="text-align:center;"> <i class="fa fa-phone"></i></p>
+                  <h6 style="text-align:center;">Phone</h6>
+                  <div class="h5" style="text-align:center;">+216 56992083</div>
+                </div>
+              </div>
+</div></div>
+<div class="card" style="margin-bottom:30px;">
+  <div class="row">
+    <div class="contact-color" >
+      <div class="card-body cc-education-header">
+        <p style="text-align:center;"> <i class="fa fa-envelope"></i></p>
+        <h6 style="text-align:center;">Email</h6>
+        <div class="h5" style="text-align:center;">Sabbahcyrine@gmail.com</div>
+      </div>
+    </div>
+</div></div>
+<div class="card" style="margin-bottom:30px;">
+  <div class="row">
+    <div class="contact-color">
+      <div class="card-body cc-education-header">
+        <p style="text-align:center;"> <i class="fa fa-map-marker"></i></p>
+        <h6 style="text-align:center;">Location</h6>
+        <div class="h5" style="text-align:center;">Taieb Mhiri Street Ariana-Tunisia</div>
+      </div>
+    </div>
+</div></div>
+</div>
+<div class="col-md-8" >
+  <div class="callback-form contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>CONTACT ME
+
+
+
+
+          </h2>
+          
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="contact-form">
+            <form [formGroup]="myform" (ngSubmit)="SaveContact($event)">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input  name="from_name" type="text" id="FullName" class="form-control" placeholder="fullname" formControlName="fullname" required>
+
+                    <p class="text-danger contact-valid" *ngIf="fullname.touched && fullname.hasError('required')" style="font-size:13px;">This field is required
+
+
+
+
+                    </p>
+
+                  </fieldset>
+                </div>   
+
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="email_id"  id="email" type="email" class="form-control" pattern="[^ @]*@[^ @]*" placeholder="adresse e-mail" formControlName="email" required>
+                    <p class="text-danger contact-valid" *ngIf="email.touched && email.hasError('required')" style="font-size:13px;">This field is required
+
+
+
+
+                    </p>
+                    <div class="text-danger contact-valid"  *ngIf="email.hasError('email')"  style="font-size:13px;">Email address invalid</div>
+
+                  </fieldset>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <fieldset>
+                    <input name="subject" id="subject" type="text" class="form-control"  placeholder="Sujet" formControlName="subject" required>
+                    <p class="text-danger contact-valid-message" *ngIf="subject.touched && subject.hasError('required')" style="font-size:13px;">This field is required</p>
+
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" id="message"  rows="6" class="form-control"  placeholder="votre message" formControlName="message" required></textarea>
+                    <p class="text-danger contact-valid-message" *ngIf="message.touched && message.hasError('required')" style="font-size:13px;">This field is required</p>
+
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" class="filled-button" [disabled]="myform.invalid" style="width:100% ;text-align:center ;">submit</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- <div id="map">
+  
+  How to change your own map point
+       1. Go to Google Maps
+       2. Click on your location point
+       3. Click "Share" and choose "Embed map" tab
+       4. Copy only URL and paste it within the src="" field below
+     
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.319954759587!2d10.19346441464246!3d36.85875967210212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34caa7bf73fd%3A0x2a10c9d86f4c93dd!2sAv.%20Taieb%20Mhiri%2C%20Ariana!5e0!3m2!1sfr!2stn!4v1655993923976!5m2!1sfr!2stn" width="835" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+       </div>-->
+   
+   </article>
+</div>
+</main>
+     

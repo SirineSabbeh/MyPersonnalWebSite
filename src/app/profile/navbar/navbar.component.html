@@ -1,36 +1,37 @@
 <nav class="navbar">
 
+
     <ul class="navbar-list">
 
-      <li class="navbar-item">
-        <button class="navbar-link" data-nav-link>
-        <a   routerLink="/">ABOUT
-           
-
+      <li class="navbar-item" >
+        <button >
+        <a class="navbar-link" data-nav-link routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>ABOUT
+          <span class="sr-only"></span>
           </a>
           </button>
+          
         </li>
-    <li class="nav-item"  >
-      <button class="navbar-link" data-nav-link>
-      <a   routerLink="/Education" >EXPERIENCE</a>
+    <li class="nav-item" >
+      <button>
+      <a  class="navbar-link" data-nav-link routerLink="/experience" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>EXPERIENCE</a>
        </button>
         </li>  
     
 
       <li class="navbar-item">
-        <button class="navbar-link" data-nav-link>  <a   routerLink="/Education" >PROJECTS</a></button>
+        <button >  <a   class="navbar-link" data-nav-link routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>PROJECTS</a></button>
       </li>
 
       <li class="navbar-item">
-        <button class="navbar-link" data-nav-link>  <a   routerLink="/Education" >SKILLS</a></button>
+        <button >  <a  class="navbar-link" data-nav-link routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>SKILLS</a></button>
       </li>
 
       <li class="navbar-item">
-        <button class="navbar-link" data-nav-link>  <a  routerLink="/Education" >EDUCATION</a></button>
+        <button >  <a class="navbar-link" data-nav-link routerLink="/Education" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>EDUCATION</a></button>
       </li>
 
       <li class="navbar-item">
-        <button class="navbar-link" data-nav-link>  <a  routerLink="/Education" >CONTACT</a></button>
+        <button >  <a class="navbar-link" data-nav-link routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>CONTACT</a></button>
 
       </li>
 

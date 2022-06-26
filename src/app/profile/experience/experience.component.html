@@ -1,0 +1,43 @@
+<main>
+ 
+    <app-header></app-header>
+      <div class="main-content">
+       <app-navbar></app-navbar>
+        <article class="about  active" data-page="about">
+   
+           <header>
+             <h2 class="h2 article-title">EXPERIENCE
+            </h2>
+           </header>
+   
+           <section class="about-text">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="timeline-centered">
+                        <div  *ngFor="let exp of exps" class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+                            <div class="timeline-entry-inner">
+                                <div class="timeline-icon color-2">
+                                    <i class="icon-pen2"></i>
+                                </div>
+                                <div class="timeline-label">
+                                    <div >
+                                    <h4>{{exp.company}}<span> -&nbsp;{{exp.timeline}}</span> </h4>
+                                </div>
+                                <h2>{{exp.role}}</h2>
+                                    <ul>
+                                        <li>{{exp.work}}</li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            </div>
+            </div>
+</section>
+</article>
+   
+   </div>
+   </main>
+   
