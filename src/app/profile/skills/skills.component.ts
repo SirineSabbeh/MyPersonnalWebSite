@@ -12,22 +12,22 @@ export class SkillsComponent implements OnInit {
 
 
   constructor(private  ProfileService :ProfileService ) { }
-  skills:any
+  skills:any=[]
 
   ngOnInit(): void {
    AOS.init();
-   this.getSkills();
- 
+  //  this.getSkills();
+   this.skills=this.ProfileService.skills();
   };
 
 
 
-  getSkills(){
-    this.ProfileService.skills().subscribe(
-      Response=>{
-       this.skills=Response
-      }
-    )
-}
+//   getSkills(){
+//     this.ProfileService.skills().subscribe(
+//       Response=>{
+//        this.skills=Response
+//       }
+//     )
+// }
 
 }

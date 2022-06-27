@@ -9,21 +9,22 @@ import { ProfileService } from '../profile.service'
 export class ProjectsComponent implements OnInit {
 
   constructor(private  ProfileService :ProfileService ) { }
-  projects:any
+  projects:any=[]
 
   ngOnInit(): void {
     
-   this.getProjects();
+   this.projects=this.ProfileService.projects();
  
   };
 
 
 
-  getProjects(){
-    this.ProfileService.projects().subscribe(
-      Response=>{
-       this.projects=Response
-      }
-    )
-}
+//   getProjects(){
+//     // this.ProfileService.projects().subscribe(
+//     //   Response=>{
+//     //    this.projects=Response
+//     //   }
+//     // )
+   
+// }
 }

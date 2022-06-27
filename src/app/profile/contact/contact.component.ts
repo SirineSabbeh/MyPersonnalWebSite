@@ -29,32 +29,54 @@ myform:any
   ngOnInit(): void {
   
   }
-
   SaveContact(e:Event){
+     
+   alert("Message sent successfully");
+   e.preventDefault();
+   emailjs
+   .sendForm(
+        'service_1d82nz6',
+      'template_tk1fznr',
+       e.target as HTMLFormElement,
+      '7iM9mW6JynosonOAf'
+     )
+      .then(
+        (result: EmailJSResponseStatus) => {
+      console.log(result.text);
+     },
+        (error) => {
+         console.log(error.text);
+       }
+     );
+    this.myform.reset();
+    
+   }
+
+  // SaveContact(e:Event){
   
    
 
-    this.profileservice.contacts(this.myform.value).subscribe(res=>{
+  //   this.profileservice.contacts(this.myform.value).subscribe(res=>{
      
-    alert("Message sent successfully");
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        'service_1d82nz6',
-        'template_tk1fznr',
-        e.target as HTMLFormElement,
-        '7iM9mW6JynosonOAf'
-      )
-      .then(
-        (result: EmailJSResponseStatus) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-      this.myform.reset();
-    })
+  //   alert("Message sent successfully");
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       'service_1d82nz6',
+  //       'template_tk1fznr',
+  //       e.target as HTMLFormElement,
+  //       '7iM9mW6JynosonOAf'
+  //     )
+  //     .then(
+  //       (result: EmailJSResponseStatus) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //     this.myform.reset();
+  //   })
    
 
    
@@ -62,7 +84,7 @@ myform:any
     
     
    
-  }
+  // }
 
   get fullname(){
     return this.myform.get("fullname")

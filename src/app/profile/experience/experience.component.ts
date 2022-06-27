@@ -8,19 +8,23 @@ import { ProfileService } from '../profile.service'
 export class ExperienceComponent implements OnInit {
 
   constructor(private  ProfileService :ProfileService ) { }
-  exps:any
+  exps:any=[]
   ngOnInit(): void {
 
-   this.getExperience();
+  //  this.getExperience();
+  this.exps=this.ProfileService.exprience();
 
   }
-  getExperience(){
-    this.ProfileService.exprience().subscribe(
-      Response=>{
-       this.exps=Response
-      }
-    )
+
+
+
+  // getExperience(){
+  //   this.ProfileService.exprience().subscribe(
+  //     Response=>{
+  //      this.exps=Response
+  //     }
+  //   )
      
     
-  }
+  // }
 }
